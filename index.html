@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- References -->
+<!-- https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/personal.html -->
+<!-- https://bulmatemplates.github.io/bulma-templates/templates/personal.html#portfolio -->
+
+<head>
+  <!-- Google tag (gtag.js) for google analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PS63CZ2F86"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PS63CZ2F86');
+  </script>
+
+  <!-- general settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio of Emmanuel ALAO</title>
+  <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/personal.css">
+  <script async type="text/javascript" src="../js/bulma.js"></script>
+
+  <!-- for modal -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/hero.css">
+  <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+  <style>
+  :root {
+    --ink: #17252a;
+    --muted: #5f6f72;
+    --paper: #f7f9f8;
+    --panel: #ffffff;
+    --line: #dbe6e2;
+    --primary: #1d6b68;
+    --primary-dark: #104746;
+    --accent: #c58b1f;
+    --soft: #edf5f3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Open Sans", Arial, sans-serif;
+  }
+
+  a {
+    color: var(--primary);
+  }
+
+  a:hover {
+    color: var(--primary-dark);
+  }
+
+  .navbar.is-link {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 8px 24px rgba(23, 37, 42, 0.06);
+  }
+
+  .navbar.is-link .navbar-item,
+  .navbar.is-link .navbar-link {
+    color: var(--ink) !important;
+    font-weight: 700;
+  }
+
+  .navbar.is-link .navbar-item:hover,
+  .navbar.is-link .navbar-item:focus {
+    background: var(--soft);
+    color: var(--primary-dark);
+  }
+
+  .navbar-brand .navbar-item {
+    letter-spacing: 0;
+  }
+
+  .navbar-burger span {
+    background-color: var(--ink);
+  }
+
+  .hero.is-link {
+    background: var(--primary-dark);
+    color: #fff;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding-top: 3.25rem;
+  }
+
+  .hero.is-link .title,
+  .hero.is-link .subtitle {
+    color: #fff;
+  }
+
+  .hero.is-link .subtitle {
+    color: rgba(255, 255, 255, 0.84);
+    line-height: 1.35;
+  }
+
+  .hero .columns {
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero .hero-body {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero .card {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+  }
+
+  .hero .card-image img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .hero-kicker {
+    color: #f2c879;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+  }
+
+  .hero-actions .button {
+    border-radius: 6px;
+    font-weight: 700;
+  }
+
+  .hero-actions .button.is-light {
+    color: var(--primary-dark);
+  }
+
+  .hero-actions .button.is-outlined {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #fff !important;
+  }
+
+  .hero-actions .button.is-outlined:hover,
+  .hero-actions .button.is-outlined:focus {
+    background: #fff;
+    border-color: #fff;
+    color: var(--primary-dark) !important;
+  }
+
+  .section {
+    padding: 5rem 1.5rem;
+  }
+
+  #about,
+  #achievements,
+  #contact {
+    background: var(--paper);
+  }
+
+  #projects,
+  #publications {
+    background: #fff;
+  }
+
+  .section-heading {
+    margin-bottom: 1.75rem;
+  }
+
+  .section-heading .title {
+    color: var(--ink);
+    display: inline-block;
+    font-weight: 700;
+    padding-bottom: 0.45rem;
+    position: relative;
+  }
+
+  .section-heading .title::after {
+    background: var(--accent);
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 4rem;
+  }
+
+  .section-heading .subtitle {
+    color: var(--muted);
+    max-width: 760px;
+  }
+
+  .card,
+  .box {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgba(23, 37, 42, 0.07);
+    overflow: hidden;
+  }
+
+  .card {
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  }
+
+  .card:hover {
+    border-color: rgba(29, 107, 104, 0.35);
+    box-shadow: 0 18px 38px rgba(23, 37, 42, 0.11);
+    transform: translateY(-2px);
+  }
+
+  .card-header {
+    box-shadow: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .card-header-title {
+    align-items: flex-start;
+    gap: 0.35rem;
+    line-height: 1.4;
+  }
+
+  .portfolio-container .card-image img,
+  .portfolio-container video {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .card-footer {
+    border-top: 1px solid var(--line);
+  }
+
+  .card-footer-item {
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .tag {
+    border-radius: 999px;
+    font-weight: 700;
+  }
+
+  .tag.is-success,
+  .tag.is-info,
+  .tag.is-link {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .tag.is-danger {
+    background: #9f6b16;
+    color: #fff;
+  }
+
+  progress.progress.is-link::-webkit-progress-value {
+    background-color: var(--primary);
+  }
+
+  progress.progress.is-link::-moz-progress-bar {
+    background-color: var(--primary);
+  }
+
+  .table-profile td {
+    border-color: var(--line);
+    vertical-align: top;
+  }
+
+  .summary-card {
+    border-left: 4px solid var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .summary-card p {
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .skill-group + .skill-group {
+    margin-top: 1.25rem;
+  }
+
+  .skill-group-title {
+    color: var(--primary-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.65rem;
+    text-transform: uppercase;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tags .tag {
+    background: var(--soft);
+    color: var(--primary-dark);
+  }
+
+  #achievements .card,
+  #publications .card {
+    border-left: 4px solid var(--primary);
+  }
+
+  #projects .project-icon {
+    align-items: center;
+    background: var(--soft);
+    border-radius: 8px;
+    color: var(--primary-dark);
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    min-height: 190px;
+  }
+
+  #projects .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  #projects .card-content .image img {
+    aspect-ratio: 16 / 10;
+    background: var(--soft);
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .publication-subtitle {
+    color: var(--primary-dark);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+  }
+
+  #publications .button.is-outlined {
+    border-color: var(--line);
+    border-radius: 6px;
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    margin-right: 0.35rem;
+  }
+
+  #publications .button.is-outlined:hover,
+  #publications .button.is-outlined:focus {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+  }
+
+  #contact .box {
+    background: var(--primary-dark);
+    color: #fff;
+  }
+
+  #contact .box a,
+  #contact .box .icon {
+    color: #fff;
+  }
+
+  .footer {
+    background: #102527;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .footer strong {
+    color: #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero.is-link {
+      min-height: auto;
+      padding-top: 4rem;
+    }
+
+    .hero .hero-body {
+      padding: 2rem 1.25rem;
+    }
+
+    .hero .title {
+      font-size: 2.35rem;
+    }
+
+    .hero .subtitle {
+      font-size: 1.35rem;
+    }
+
+    .section {
+      padding: 3.5rem 1rem;
+    }
+
+    .hero-actions .button {
+      flex: 1 1 10rem;
+    }
+  }
+  </style>
+  
+  <!-- unique tag given by google search console -->
+  <meta name="google-site-verification" content="gq5j7CTEbR1B_o5BQwYdwrDK7aBt5rnKEYgqp4Lr770" />
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="navbar is-link is-fixed-top">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        Emmanuel ALAO
+      </a>
+      <div class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#about">
+          <span class="icon">
+            <i class="fas fa-info"></i>
+          </span>
+          <span>About</span>
+        </a>
+        <a class="navbar-item" href="#projects">
+          <span class="icon">
+            <i class="fas fa-th-list"></i>
+          </span>
+          <span>Projects</span>
+        </a>
+        <a class="navbar-item" href="#achievements">
+          <span class="icon">
+            <i class="fas fa-crown"></i>
+          </span>
+          <span>Achievements</span>
+        </a>
+        <a class="navbar-item" href="#publications">
+          <span class="icon">
+            <i class="fas fa-book-open"></i>
+          </span>
+          <span>Publications</span>
+        </a>
+        <a class="navbar-item" href="#contact">
+          <span class="icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span>Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero is-link is-large">
+    <div class="columns is-centered">
+    <div class="column is-8">
+    <div class="columns is-vcentered">
+    <!-- left side -->
+    <div class="column is-7">
+    <div class="hero-body">
+      <div class="container">
+        <p class="hero-kicker">Automatic Control | Robotics | Autonomous Systems</p>
+        <h1 class="title is-1">
+          Emmanuel ALAO
+        </h1>
+        <h2 class="subtitle is-3">
+          Automation and Robotics Engineering building safe, uncertainty-aware control strategies for autonomous navigation.
+        </h2>
+        <div class="hero-actions">
+          <a class="button is-light" href="./CV_Emmanuel_English_np.pdf" target="_blank">
+            <span class="icon"><i class="fa-regular fa-file"></i></span>
+            <span>View CV</span>
+          </a>
+          <a class="button is-outlined" href="#publications">
+            <span class="icon"><i class="fas fa-book-open"></i></span>
+            <span>Publications</span>
+          </a>
+          <a class="button is-outlined" href="#contact">
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- right side -->
+    <div class="column is-5">
+      <!-- Profile picture -->
+      <div class="card">
+          <div class="card-image">
+              <figure class="image">
+              <img src="./media/my_photo.jpg" alt="self_taken_photo">
+              </figure>
+          </div>
+          </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-heading">
+        <h3 class="title is-2">About Me</h3>
+        <h4 class="subtitle is-5">Ph.D. in Automatic Control and Robotics with a strong background in embedded systems, sensor and actuator integration, autonomous navigation, and software development.</h4>
+      </div>
+      <br>
+
+      <div class="card summary-card">
+        <div class="card-content">
+          <p>
+            I combine analytical research experience with practical engineering skills to design, integrate, and validate robotic and cyber-physical systems. My work spans safe autonomous navigation under uncertainty, sensor calibration and integration, control strategy development, and MATLAB/Python/C++ implementation on simulation platforms and real robots.
+          </p>
+        </div>
+      </div>
+
+    <div class="columns has-same-height">
+      <div class="column">
+        <!-- Profile -->
+        <div class="card">
+          <div class="card-content">
+            <h3 class="title is-4">Profile</h3>
+
+            <div class="content">
+              <table class="table-profile">
+                <tr>
+                  <th colspan="1"></th>
+                  <th colspan="2"></th>
+                </tr>
+                <tr>
+                  <td>Curriculum Vitae</td>
+                  <td>
+                    <span class="icon">
+                      <i class="fa-regular fa-file"></i>
+                    </span>
+                    <a href="./CV_Emmanuel_English_np.pdf" target="_blank">CV.pdf</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Current Role</td>
+                  <td>Research and Teaching Assistant, UTC Compiegne</td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>
+                    <a href="mailto:emmanuel.alao@hds.utc.fr">emmanuel.alao@hds.utc.fr</a>
+                    <br>
+                    <a href="mailto:emmalao4real@gmail.com">emmalao4real@gmail.com</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>LinkedIn</td>
+                  <td><a href="https://www.linkedin.com/in/emmanuel-alao-02054414b/" target="_blank">in/emmanuel-alao-02054414b</a></td>
+                </tr>
+                <tr>
+                  <td>Education</td>
+                  <td>
+                    <ul>
+                    <li>Ph.D. - Automatic Control and Robotics, Universite de Technologie de Compiegne (2022-2025)</li>
+                    <li>Master's - Control and Robotics, Ecole Centrale de Nantes (2018-2020)</li>
+                    <li>Bachelor's - Computer Engineering, Federal University of Technology Minna (2011-2016)</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Languages</td>
+                  <td>English, French</td>
+                </tr>
+                <!-- Interests hidden for now.
+                <tr>
+                  <td>Interests</td>
+                  <td>
+                    <ul>
+                    <li>Fitness</li>
+                    <li>DIY electronics</li>
+                    <li>Reading fiction</li>
+                    </ul>
+                  </td>
+                </tr>
+                -->
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="column">
+        <!-- Skills -->
+        <div class="card">
+          <div class="card-content skills-content">
+            <h3 class="title is-4">Skills</h3>
+            <div class="content">
+
+              <div class="skill-group">
+                <p class="skill-group-title">Programming & Data</p>
+                <div class="skill-tags">
+                  <span class="tag">C/C++</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">MATLAB</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">Django</span>
+                  <span class="tag">Git</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <p class="skill-group-title">Robotics & Embedded Systems</p>
+                <div class="skill-tags">
+                  <span class="tag">ROS 1 & 2</span>
+                  <span class="tag">Nvidia Jetson</span>
+                  <span class="tag">STM32</span>
+                  <span class="tag">Arduino</span>
+                  <span class="tag">Sensor Integration</span>
+                  <span class="tag">Actuator Integration</span>
+                  <span class="tag">Drone Piloting</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <p class="skill-group-title">Control & Autonomous Systems</p>
+                <div class="skill-tags">
+                  <span class="tag">Automatic Control</span>
+                  <span class="tag">Safe Navigation</span>
+                  <span class="tag">Risk Assessment</span>
+                  <span class="tag">Uncertainty Handling</span>
+                  <span class="tag">System Modeling</span>
+                  <span class="tag">Identification</span>
+                  <span class="tag">Decision-Making</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <p class="skill-group-title">Design & Simulation</p>
+                <div class="skill-tags">
+                  <span class="tag">CARLA</span>
+                  <span class="tag">Catia</span>
+                  <span class="tag">Fusion 360</span>
+                  <span class="tag">Gazebo</span>
+                  <span class="tag">Robotarium</span>
+                  <span class="tag">Quanser</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-heading">
+        <h3 class="title is-2">Projects</h3>
+        <h4 class="subtitle is-5">Selected robotics and control software projects.</h4>
+      </div>
+      <br>
+
+      <div class="columns is-multiline">
+        <div class="column is-4">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span class="tag is-success mr-2">Demo</span>
+                <span>Nonlinear Robot MPC</span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <img src="https://raw.githubusercontent.com/alao-emmanuel/nonlinear_robot_mpc/main/docs/nonlinear-robot-mpc-with-sfm.gif" alt="Nonlinear robot MPC with social force model animation">
+              </figure>
+              <div class="content mt-4">
+                <p>
+                  Nonlinear model predictive control for robot control and autonomous navigation using social force models.
+                </p>
+                <div class="project-meta">
+                  <span class="tag">NMPC</span>
+                  <span class="tag">Robotics</span>
+                  <span class="tag">Control</span>
+                </div>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item is-link modal-button" href="https://github.com/alao-emmanuel/nonlinear_robot_mpc" target="_blank">
+                <span class="icon mr-1">
+                  <i class="fa-brands fa-github"></i>
+                </span>
+                GitHub
+              </a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-heading">
+        <h3 class="title is-2">Achievements</h3>
+      </div>
+      <br>
+
+      <!-- Free Urban Challenge at UTAC 2025 -->
+      <div class="card block">
+        <header class="card-content">
+          <span class="has-text-weight-bold mr-2">2025</span>
+          <span class="tag is-info">Award</span>
+          <div class="mt-2">
+            Co-Supervisor of the winning team of the Free Urban Challenge at UTAC.
+          </div>
+        </header>
+      </div>
+
+      <!-- Best Student Paper ICINCO'24 -->
+      <div class="card block">
+        <header class="card-content">
+          <span class="has-text-weight-bold mr-2">2024</span>
+          <span class="tag is-success">Award</span>
+          <div class="mt-2">
+            Best Student Paper, ICINCO'24, Porto, Portugal.
+          </div>
+        </header>
+      </div>
+
+      <!-- Scholar Total E&P Nigeria/Quai d'Orsay Scholarship -->
+      <div class="card block">
+        <header class="card-content">
+          <span class="has-text-weight-bold mr-2">2018-2020</span>
+          <span class="tag is-danger">Scholarship</span>
+          <div class="mt-2">
+            Total E&P Nigeria/Quai d'Orsay International Master's Degree Scholar.
+          </div>
+        </header>
+      </div>
+
+      <!-- President Sustainable Development Goals (SDGs) -->
+      <div class="card block">
+        <header class="card-content">
+          <span class="has-text-weight-bold mr-2">2017-2018</span>
+          <span class="tag is-info">Leadership</span>
+          <div class="mt-2">
+            President, Sustainable Development Goals (SDGs), NYSC, Mowe.
+          </div>
+        </header>
+      </div>
+
+      <!-- First Class Honors in Computer Engineering -->
+      <div class="card block">
+        <header class="card-content">
+          <span class="has-text-weight-bold mr-2">2016</span>
+          <span class="tag is-info">Academic</span>
+          <div class="mt-2">
+            First Class Honors, Computer Engineering, Federal University of Technology Minna (FUTMinna).
+          </div>
+        </header>
+      </div>
+
+      <!-- Best Project Computer Engineering -->
+      <div class="card block">
+        <header class="card-content">
+          <span class="has-text-weight-bold mr-2">2016</span>
+          <span class="tag is-success">Award</span>
+          <div class="mt-2">
+            Best Project, Computer Engineering, Federal University of Technology Minna (FUTMinna).
+          </div>
+        </header>
+      </div>
+
+      <!-- Vice President JETS Club -->
+      <div class="card block">
+        <header class="card-content">
+          <span class="has-text-weight-bold mr-2">2011</span>
+          <span class="tag is-info">Leadership</span>
+          <div class="mt-2">
+            Vice President, Junior Engineering and Technology Students (JETs) Club.
+          </div>
+        </header>
+      </div>
+
+    </div>
+  </section>
+  <!-- Publications -->
+  <section class="section" id="publications">
+    <div class="container">
+      <div class="section-heading">
+        <h3 class="title is-2">Publications & Conferences</h3>
+      </div>
+      <br>
+
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2025</span>
+          <span class="tag is-success">Conference</span>
+          <div class="mt-2">
+            <span class="has-text-weight-bold">E. Alao</span>, L. Adouane, and P. Martinet, &ldquo;Reliable multi-level optimization for safe predictive control of autonomous vehicles to avoid uncertain multimodal PLEVs,&rdquo; IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 19th-25th October 2025, Hangzhou, China.
+          </div>
+          <div class="mt-2">
+            <a class="button is-outlined is-small" href="https://inria.hal.science/hal-05243754v1" target="_blank">HAL</a>
+            <a class="button is-outlined is-small" href="https://doi.org/10.1109/IROS60139.2025.11246468" target="_blank">DOI</a>
+            <a class="button is-outlined is-small" href="https://ieeexplore.ieee.org/document/11246468" target="_blank">IEEE Xplore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2025</span>
+          <span class="tag is-success">Conference</span>
+          <div class="mt-2">
+            <span class="has-text-weight-bold">E. Alao</span>, L. Adouane, and P. Martinet, &ldquo;Stochastic and safe multi-risk fusion for autonomous navigation in the presence of PLEVs,&rdquo; 36th IEEE Intelligent Vehicles Symposium (IV), 22nd-25th June 2025, Cluj-Napoca, Romania.
+          </div>
+          <div class="mt-2">
+            <a class="button is-outlined is-small" href="https://hal.science/hal-05076678v1" target="_blank">HAL</a>
+            <a class="button is-outlined is-small" href="https://doi.org/10.1109/IV64158.2025.11097408" target="_blank">DOI</a>
+            <a class="button is-outlined is-small" href="https://ieeexplore.ieee.org/document/11097408" target="_blank">IEEE Xplore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2025</span>
+          <span class="tag is-link">Journal</span>
+          <div class="mt-2">
+            <span class="has-text-weight-bold">E. Alao</span>, L. Adouane, and P. Martinet, &ldquo;Multi-Priority-Based Strategy for Risk Assessment and Management in the Presence of Multiple Personal Light Electric Vehicles,&rdquo; Springer Nature Computer Science, 2025.
+          </div>
+          <div class="mt-2">
+            <a class="button is-outlined is-small" href="https://hal.science/hal-05232930v1" target="_blank">HAL</a>
+            <a class="button is-outlined is-small" href="https://doi.org/10.1007/s42979-025-04510-3" target="_blank">DOI</a>
+            <a class="button is-outlined is-small" href="https://link.springer.com/article/10.1007/s42979-025-04510-3" target="_blank">Springer</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2025</span>
+          <span class="tag is-success">Conference</span>
+          <div class="mt-2">
+            <span class="has-text-weight-bold">E. Alao</span>, L. Adouane, and P. Martinet, &ldquo;Hybrid optimization method for safe autonomous navigation under uncertainty,&rdquo; 12th IFAC-Intelligent Autonomous Vehicles (IFAC-IAV), 7th-9th May 2025, Phoenix, Arizona, USA.
+          </div>
+          <div class="mt-2">
+            <a class="button is-outlined is-small" href="https://hal.science/hal-05232803v1" target="_blank">HAL</a>
+            <a class="button is-outlined is-small" href="https://doi.org/10.1016/j.ifacol.2025.07.021" target="_blank">DOI</a>
+            <a class="button is-outlined is-small" href="https://www.sciencedirect.com/science/article/pii/S240589632500360X" target="_blank">ScienceDirect</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2024</span>
+          <span class="tag is-success">Conference</span>
+          <div class="mt-2">
+            <span class="has-text-weight-bold">E. Alao</span>, L. Adouane, and P. Martinet, &ldquo;Multi-risk assessment and management in the presence of personal light electric vehicles,&rdquo; 21st International Conference on Informatics in Control, Automation and Robotics (ICINCO), 18th-20th November 2024, Porto, Portugal. Awarded: Best student paper.
+          </div>
+          <div class="mt-2">
+            <a class="button is-outlined is-small" href="https://hal.science/hal-04889513v1" target="_blank">HAL</a>
+            <a class="button is-outlined is-small" href="https://doi.org/10.5220/0013059500003822" target="_blank">DOI</a>
+            <a class="button is-outlined is-small" href="https://www.scitepress.org/Link.aspx?doi=10.5220%2F0013059500003822" target="_blank">SciTePress</a>
+            <a class="button is-outlined is-small" href="https://www.scitepress.org/Papers/2024/130595/130595.pdf" target="_blank">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2024</span>
+          <span class="tag is-success">Conference</span>
+          <div class="mt-2">
+            <span class="has-text-weight-bold">E. Alao</span>, L. Adouane, and P. Martinet, &ldquo;Reliable risk assessment and management using probabilistic fusion of predictive inter-distance profile for urban autonomous driving,&rdquo; 22nd European Control Conference (ECC), 25th-28th June 2024, Stockholm, Sweden.
+          </div>
+          <div class="mt-2">
+            <a class="button is-outlined is-small" href="https://hal.science/hal-04525836v1" target="_blank">HAL</a>
+            <a class="button is-outlined is-small" href="https://doi.org/10.23919/ECC64448.2024.10591000" target="_blank">DOI</a>
+            <a class="button is-outlined is-small" href="https://ieeexplore.ieee.org/document/10591000" target="_blank">IEEE Xplore</a>
+            <a class="button is-outlined is-small" href="https://www.paperhost.org/proceedings/controls/ECC24/files/0590.pdf" target="_blank">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="publication-subtitle">Other Congress and Workshops</h4>
+
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2025</span>
+          <span class="tag is-info">Workshop</span>
+          <div class="mt-2">
+            <span class="has-text-weight-bold">E. Alao</span>, L. Adouane, and P. Martinet, &ldquo;Safe Autonomous Navigation under Uncertainty: A Multi-Risk Control Optimization Framework,&rdquo; 2nd Safety of Intelligent and Autonomous Vehicles: Formal Methods vs. Machine Learning approaches for reliable navigation (SIAV-FM2L) workshop, at IROS2025, 20th October 2025, Hangzhou, China.
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2024</span>
+          <span class="tag is-info">Workshop</span>
+          <div class="mt-2">
+            <span class="has-text-weight-bold">E. Alao</span>, L. Adouane, and P. Martinet, &ldquo;A Multi-Risk Assessment and Management Approach for Autonomous Driving in the Presence of Uncertainties introduced by PLEVs,&rdquo; CPER Recherche et Innovation en Transports et Mobilite Eco-responsables et Autonomes (CPER RITMEA) workshop, 28th June 2024, Compiegne, France.
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <span class="has-text-weight-bold mr-2">2024</span>
+          <span class="tag is-info">Workshop</span>
+          <div class="mt-2">
+            <span class="has-text-weight-bold">E. Alao</span>, L. Adouane, and P. Martinet, &ldquo;Reliable Risk Assessment and Management Architecture for Autonomous navigation in Urban Centers,&rdquo; International Symposium on the Verification of Autonomous Systems.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h3 class="title is-2">Contact</h3>
+      </div>
+      <br>
+
+      <div class="columns">
+        <div class="column is-6 is-offset-3">
+          <div class="box">
+            <div>
+            <span class="icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <a href="mailto:emmanuel.alao@hds.utc.fr" target="_blank">emmanuel.alao@hds.utc.fr</a>
+            </div>
+            <div>
+            <span class="icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <a href="mailto:emmalao4real@gmail.com" target="_blank">emmalao4real@gmail.com</a>
+            </div>
+            <div>
+              <span class="icon">
+                <i class="fa-brands fa-linkedin"></i>
+              </span>
+              <a href="https://www.linkedin.com/in/emmanuel-alao-02054414b/" target="_blank">in/emmanuel-alao-02054414b</a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer --> <!-- WIP -->
+  <footer class="footer">
+    <div class="section-heading">
+      <p>
+        Copyright &copy; <strong>2024</strong> Emmanuel ALAO. All Rights Reserved.
+      </p>
+      <p>
+        This site uses Google Analytics, a service provided by Google, to analyze and improve the site.
+        This service uses cookies to collect traffic data. Traffic data is collected anonymously and does not personally identify you.
+      </p>
+    </div>
+  </footer>
+
+    <!--  ===============
+    Write Hidden Modal Contents Below.
+    ===============  -->
+
+    <!-- start modal-card-sce2022 -->
+    <div id="modal-card-sce2022" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <!-- content -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./media/sce2022_multi_agent_demo.jpg" alt="sce2022">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              Official Website : <a href="https://www.smartcityexpo.com/" target="_blank">https://www.smartcityexpo.com/</a>
+              <br>
+            </div>
+          </div>
+        </div>
+        <!-- end content -->
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- end modal-card-sce2022 -->
+
+    <!-- start modal-card-aichallenge2022int -->
+    <div id="modal-card-aichallenge2022int" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <!-- content -->
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="./media/aichallenge2022_integration.png" alt="aichallenge2022_integration">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              Video recording of the competition : <a href="https://youtu.be/DUOCrdhPypU?t=232" target="_blank">https://youtu.be/DUOCrdhPypU?t=232</a>
+              <br>
+            </div>
+          </div>
+        </div>
+        <!-- end content -->
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <!-- end modal-card-aichallenge2022int -->
+
+    <!-- Scripts Needed For Modal -->
+    <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>  
+    <script src="../js/wild.js"></script>
+    <script>
+    // [Modal]
+    document.addEventListener("DOMContentLoaded", function() {
+    //The first argument are the elements to which the plugin shall be initialized
+    //The second argument has to be at least a empty object or a object with your desired options
+    OverlayScrollbars(document.querySelectorAll("body"), { });
+    });
+
+    // [NavBar]
+    $(document).ready(function() {
+    // Check for click events on the navbar burger icon
+    $(".navbar-burger").click(function() {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $(".navbar-burger").toggleClass("is-active");
+        $(".navbar-menu").toggleClass("is-active");
+    });
+    });
+    </script>
+
+
+</body>
+</html>
