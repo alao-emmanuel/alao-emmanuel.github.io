@@ -345,6 +345,38 @@
     width: 100%;
   }
 
+  #experience .card {
+    border-left: 4px solid var(--accent);
+  }
+
+  .experience-heading {
+    align-items: flex-start;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 0.35rem;
+  }
+
+  .experience-heading .title {
+    margin-bottom: 0.25rem;
+  }
+
+  .experience-date {
+    color: var(--primary-dark);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .experience-meta {
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+  }
+
+  .experience-list {
+    margin-top: 0.75rem;
+  }
+
   .publication-subtitle {
     color: var(--primary-dark);
     font-size: 1.35rem;
@@ -412,6 +444,16 @@
     .hero-actions .button {
       flex: 1 1 10rem;
     }
+
+    .experience-heading {
+      display: block;
+    }
+
+    .experience-date {
+      display: block;
+      margin-top: 0.35rem;
+      white-space: normal;
+    }
   }
   </style>
   
@@ -440,6 +482,12 @@
             <i class="fas fa-info"></i>
           </span>
           <span>About</span>
+        </a>
+        <a class="navbar-item" href="#experience">
+          <span class="icon">
+            <i class="fas fa-briefcase"></i>
+          </span>
+          <span>Experience</span>
         </a>
         <a class="navbar-item" href="#projects">
           <span class="icon">
@@ -578,7 +626,7 @@
                   <td>
                     <ul>
                     <li>Ph.D. - Automatic Control and Robotics, Universite de Technologie de Compiegne (2022-2025)</li>
-                    <li>Master's - Control and Robotics, Ecole Centrale de Nantes (2018-2020)</li>
+                    <li>Master's - Control and Robotics (Specialization: Advanced Robotics), Ecole Centrale de Nantes (2018-2020)</li>
                     <li>Bachelor's - Computer Engineering, Federal University of Technology Minna (2011-2016)</li>
                     </ul>
                   </td>
@@ -664,6 +712,116 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-heading">
+        <h3 class="title is-2">Work Experience</h3>
+        <h4 class="subtitle is-5">Research, robotics integration, autonomous navigation, and engineering practice across academic and applied environments.</h4>
+      </div>
+      <br>
+
+      <div class="card block">
+        <div class="card-content">
+          <div class="experience-heading">
+            <div>
+              <h3 class="title is-4">Research and Teaching Assistant</h3>
+              <p class="experience-meta">UTC Compi&egrave;gne | Compi&egrave;gne, France</p>
+            </div>
+            <span class="experience-date">2025 &ndash; Present</span>
+          </div>
+          <div class="content">
+            <ul class="experience-list">
+              <li>Teaching and supervision of laboratory sessions in automatic control and cyber-physical systems.</li>
+              <li>Supervision of undergraduate and graduate practical courses in linear/nonlinear control, including system modeling, identification, open and closed-loop control performance analysis.</li>
+              <li>Guidance of graduate-level students in planning, control, and decision-making for autonomous single and multi-agent systems, integrating localization, uncertainty handling, and real-time/IoT communications.</li>
+              <li>Introduction to and supervision of MATLAB, Python and C/C++ based project development using simulation platforms (Robotarium, Quanser) and real robotic systems (QCar2, Renault Zoe Car).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <div class="experience-heading">
+            <div>
+              <h3 class="title is-4">Doctoral Researcher</h3>
+              <p class="experience-meta">Universite de Technologie de Compiegne (UTC) | Compiegne, France</p>
+            </div>
+            <span class="experience-date">2022 &ndash; 2025</span>
+          </div>
+          <div class="content">
+            <ul class="experience-list">
+              <li>Developed safe autonomous navigation strategies for uncertain urban interactions with Personal Light Electric Vehicles (PLEVs).</li>
+              <li>Designed multi-risk assessment methods using predictive inter-distance profiles, probabilistic fusion, and uncertainty-aware decision-making.</li>
+              <li>Built multi-level motion optimization and control frameworks integrating risk assessment with predictive control.</li>
+              <li>Designed and experimented with decision-making and control architectures integrating MATLAB/Python, ROS 2, CARLA, and a robotized Renault Zoe car in augmented-reality settings with virtual multimodal agents.</li>
+              <li>Published and presented research at IROS, IEEE IV, ECC, IFAC-IAV, ICINCO, and Springer Nature Computer Science.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <div class="experience-heading">
+            <div>
+              <h3 class="title is-4">Control &amp; Robotics Integration Engineer</h3>
+              <p class="experience-meta">ACENTAURI Inria | Sophia Antipolis, France</p>
+            </div>
+            <span class="experience-date">2021 &ndash; 2022</span>
+          </div>
+          <div class="content">
+            <ul class="experience-list">
+              <li>Integration of perception/localization sensors and computers (Nvidia Jetson AGX) on the Scout mini robotic platform under Ubuntu and ROS.</li>
+              <li>Calibration of sensors: cameras (360&deg;), IMU, LiDAR and working with partners (Safran, Novocap) to integrate Deep Learning End-to-End algorithms (MOBIDEEP Project).</li>
+              <li>Development of a reactive and proactive autonomous navigation strategy.</li>
+              <li>Preparation, demonstration and documentation for guiding a visually impaired person.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <div class="experience-heading">
+            <div>
+              <h3 class="title is-4">Control &amp; Robotics Engineer - Intern</h3>
+              <p class="experience-meta">CHORALE Inria | Sophia Antipolis, France</p>
+            </div>
+            <span class="experience-date">2019 &ndash; 2020</span>
+          </div>
+          <div class="content">
+            <ul class="experience-list">
+              <li>Optimal perception uncertainty-aware proactive navigation.</li>
+              <li>Development of robot control strategy in a future time horizon (CROWDBOT H2020 project).</li>
+              <li>Simulation and implementation of developed algorithm in MATLAB -&gt; Python -&gt; ROS Gazebo and on a real robot.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="card-content">
+          <div class="experience-heading">
+            <div>
+              <h3 class="title is-4">Computer Engineer</h3>
+              <p class="experience-meta">Christopher University | Mowe, Nigeria</p>
+            </div>
+            <span class="experience-date">2017 &ndash; 2018</span>
+          </div>
+          <div class="content">
+            <ul class="experience-list">
+              <li>Internet/web server, CCTV and computer maintenance.</li>
+              <li>System software management and installation.</li>
+              <li>Networking and SQL database management.</li>
+            </ul>
           </div>
         </div>
       </div>
