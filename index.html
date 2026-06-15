@@ -337,6 +337,11 @@
     width: 100%;
   }
 
+  #projects .card-content .image img.project-image-contain {
+    background: #fff;
+    object-fit: contain;
+  }
+
   #projects .video-preview {
     aspect-ratio: 16 / 10;
     background: var(--soft);
@@ -876,6 +881,39 @@
           <div class="card">
             <header class="card-header">
               <p class="card-header-title">
+                <span class="tag is-success mr-2">Hardware</span>
+                <span>Robotic Sensor Platform Design &amp; Integration</span>
+              </p>
+            </header>
+            <div class="card-content">
+              <figure class="image">
+                <img class="project-image-contain" src="./media/robotic_sensor_platform_design_development_integration.png" alt="Design, development, and sensor integration of a robotic platform">
+              </figure>
+              <div class="content mt-4">
+                <p>
+                  Designed and developed a modular sensor platform for the Scout Mini robot during my work as a Control &amp; Robotics Integration Engineer at Inria.
+                </p>
+                <p>
+                  Integrated 360&deg; and stereo/depth cameras, RS-LiDAR, Nvidia Jetson AGX Xavier, onboard computing, and wireless communication for autonomous navigation research.
+                </p>
+                <p>
+                  The platform is used by doctoral researchers, master's students, and other researchers/engineers for robotics development and experimentation.
+                </p>
+                <div class="project-meta">
+                  <span class="tag">3D Design</span>
+                  <span class="tag">Sensor Integration</span>
+                  <span class="tag">Embedded Systems</span>
+                  <span class="tag">ROS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
                 <span class="tag is-info mr-2">Video</span>
                 <span>Robotics Video Playlist</span>
               </p>
@@ -1219,54 +1257,6 @@
     <!--  ===============
     Write Hidden Modal Contents Below.
     ===============  -->
-
-    <!-- start modal-card-sce2022 -->
-    <div id="modal-card-sce2022" class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <!-- content -->
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./media/sce2022_multi_agent_demo.jpg" alt="sce2022">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              Official Website : <a href="https://www.smartcityexpo.com/" target="_blank">https://www.smartcityexpo.com/</a>
-              <br>
-            </div>
-          </div>
-        </div>
-        <!-- end content -->
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <!-- end modal-card-sce2022 -->
-
-    <!-- start modal-card-aichallenge2022int -->
-    <div id="modal-card-aichallenge2022int" class="modal">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <!-- content -->
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./media/aichallenge2022_integration.png" alt="aichallenge2022_integration">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              Video recording of the competition : <a href="https://youtu.be/DUOCrdhPypU?t=232" target="_blank">https://youtu.be/DUOCrdhPypU?t=232</a>
-              <br>
-            </div>
-          </div>
-        </div>
-        <!-- end content -->
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <!-- end modal-card-aichallenge2022int -->
 
     <!-- Scripts Needed For Modal -->
     <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
